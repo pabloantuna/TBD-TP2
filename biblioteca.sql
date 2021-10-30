@@ -91,4 +91,4 @@ SET precio = 1.2 * precio
 WHERE (SELECT nacionalidad FROM Autor WHERE Autor.id = (SELECT Escribe.id FROM Escribe WHERE Escribe.isbn = Libro.isbn)) <> 'argentina' AND precio <= 200
 /* Apartado d */
 DELETE FROM Libro
-WHERE ano = 1998;
+WHERE isbn IN (SELECT isbn FROM Escribe WHERE ano = 1998);
