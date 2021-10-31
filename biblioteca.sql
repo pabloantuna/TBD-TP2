@@ -5,9 +5,9 @@ Garavano Lautaro - Legajo: G-5582/4
 */
 /* Ejercicio 1 */
 
-CREATE DATABASE IF NOT EXISTS pantuna_Biblioteca;
+CREATE DATABASE IF NOT EXISTS Biblioteca;
 
-USE pantuna_Biblioteca;
+USE Biblioteca;
 
 DROP TABLE IF EXISTS Escribe;
 DROP TABLE IF EXISTS Autor;
