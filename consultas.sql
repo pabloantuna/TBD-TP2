@@ -9,6 +9,7 @@ Garavano Lautaro - Legajo: G-5582/4
 /* Apartado a */
 SELECT nombre FROM Persona WHERE
 codigo IN (SELECT codigo FROM Propietario);
+
 /* Apartado b */
 SELECT codigo FROM Inmueble WHERE precio >= 600000 AND precio <= 700000;
 
