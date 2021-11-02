@@ -61,14 +61,14 @@ INSERT INTO Libro (isbn, titulo, editorial, precio) VALUES ('9789507428739', 'El
 INSERT INTO Libro (isbn, titulo, editorial, precio) VALUES ('9789503701386', 'Paris era una fiesta', 'Planeta', 300);
 
 /* En la tabla Escribe */
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Abelardo' AND apellido = 'Castillo'), '9789500411110', 1991);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Abelardo' AND apellido = 'Castillo'), '9789507312267', 1998);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jane' AND apellido = 'Austen'), '9789500803359', 1814);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jane' AND apellido = 'Austen'), '9789870408543', 1815);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jorge Luis' AND apellido = 'Borges'), '9789500401906', 1998);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jorge Luis' AND apellido = 'Borges'), '9789500416276', 1985);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Ernest' AND apellido = 'Hemingway'), '9789507428739', 1998);
-INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Ernest' AND apellido = 'Hemingway'), '9789503701386', 1983);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Abelardo' AND apellido = 'Castillo'), (SELECT isbn FROM Libro Where titulo = 'Cronica de un iniciado'), 1991);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Abelardo' AND apellido = 'Castillo'), (SELECT isbn FROM Libro Where titulo = 'El evangelio segun Van Hutten'), 1998);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jane' AND apellido = 'Austen'), (SELECT isbn FROM Libro Where titulo = 'Orgullo y Prejuicio'), 1814);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jane' AND apellido = 'Austen'), (SELECT isbn FROM Libro Where titulo = 'Emma'), 1815);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jorge Luis' AND apellido = 'Borges'), (SELECT isbn FROM Libro Where titulo = 'El libro de arena'), 1998);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Jorge Luis' AND apellido = 'Borges'), (SELECT isbn FROM Libro Where titulo = 'Elogio de la sombra'), 1985);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Ernest' AND apellido = 'Hemingway'), (SELECT isbn FROM Libro Where titulo = 'El viejo y el mar'), 1998);
+INSERT INTO Escribe (id, isbn, ano) VALUES ((SELECT id FROM Autor WHERE nombre = 'Ernest' AND apellido = 'Hemingway'), (SELECT isbn FROM Libro Where titulo = 'Paris era una fiesta'), 1983);
 
 /* Ejercicio 4 */
 
