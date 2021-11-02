@@ -19,7 +19,7 @@ WHERE Persona.codigo IN
     (SELECT Cliente.codigo FROM Cliente
      WHERE Cliente.codigo IN (SELECT codigo_cliente FROM PrefiereZona) AND Cliente.codigo NOT IN
         (SELECT codigo_cliente FROM PrefiereZona
-         WHERE NOT (nombre_poblacion = "Santa Fe" AND nombre_zona = "Norte")));
+         WHERE NOT (nombre_poblacion = 'Santa Fe' AND nombre_zona = 'Norte')));
 
 /* Apartado d */
 SELECT nombre FROM Persona WHERE
@@ -30,7 +30,7 @@ EXISTS (SELECT * FROM PrefiereZona WHERE
         AND nombre_zona = 'Centro'));
 
 /* Apartado e */
-SELECT nombre_zona, COUNT(*), AVG(precio) FROM Inmueble WHERE nombre_poblacion = "Rosario" GROUP BY nombre_zona;
+SELECT nombre_zona, COUNT(*) 'Cant. Inmuebles', AVG(precio) 'Promedio Precios' FROM Inmueble WHERE nombre_poblacion = 'Rosario' GROUP BY nombre_zona;
 
 /* Apartado f */
 SELECT nombre FROM Persona 
